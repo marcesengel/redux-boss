@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Utility to write expressive redux actions.",
   "main": "src/index.js",
+  "repository": "https://github.com/DragonRaider5/redux-boss",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch"
