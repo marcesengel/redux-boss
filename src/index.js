@@ -70,7 +70,10 @@ Action.prototype.seal = function () {
         emit,
         getState
       ))
-        .catch((error) => emit('error', error))
+        .catch((error) => {
+          emit('error', error)
+          throw error
+        })
     }
 
     return actionThunk.bind(this)
