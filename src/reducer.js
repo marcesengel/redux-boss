@@ -19,7 +19,7 @@ function createReducer (defaultState) {
 
   return function reducer (state, action) {
     if (action.type === '@@INIT')
-      return createDefaultState()
+      return defaultState
 
     const handlers = reducers[action.type]
     if (!handlers)
