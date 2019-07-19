@@ -22,7 +22,7 @@ function createReducer (createDefaultState) {
   checkType(createDefaultState, 'function', createDefaultState)
 
   return function reducer (state, action) {
-    if (action === '@@INIT')
+    if (action.type === '@@INIT')
       return createDefaultState()
 
     const handlers = reducers[action.type]
