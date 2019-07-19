@@ -1,6 +1,6 @@
 {
   "name": "redux-boss",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Utility to write expressive redux actions.",
   "main": "src/index.js",
   "repository": "https://github.com/DragonRaider5/redux-boss",
