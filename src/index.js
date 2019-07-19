@@ -109,5 +109,5 @@ Action.prototype._createEventEmitter = function (dispatch, getState) {
   return emit.bind(this)
 }
 
-module.exports.default = Action
+module.exports = Action
 module.exports.createReducer = reducer.createReducer
