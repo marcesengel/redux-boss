@@ -13,13 +13,9 @@ function add (actionType, reducer, handler) {
   reducers[actionType][reducer] = handler
 }
 
-function createReducer (createDefaultState) {
-  if (typeof createDefaultState === 'undefined')
-    createDefaultState = function () {
-      return Immutable.Map()
-    }
-  
-  checkType(createDefaultState, 'function', createDefaultState)
+function createReducer (defaultState) {
+  if (!Immutable.Map.isMap(defaultState))
+    throw new Error('Expected default state to be an immutable Map.')
 
   return function reducer (state, action) {
     if (action.type === '@@INIT')
