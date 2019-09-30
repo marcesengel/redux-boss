@@ -18,8 +18,8 @@ function createReducer (defaultState) {
     throw new Error('Expected default state to be an immutable Map.')
 
   return function reducer (state, action) {
-    if (action.type === '@@INIT')
-      return defaultState
+    if (typeof state === 'undefined')
+      state = defaultState
 
     const handlers = reducers[action.type]
     if (!handlers)
